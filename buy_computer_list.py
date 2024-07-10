@@ -1,30 +1,22 @@
 current_choice="_"
 Computer_list=[]
+available_list=["Computer",
+                "Monitor",
+                "Keyboard",
+                "Mouse",
+                "Mouse mat",
+                "hdmi"]
+valid_choice = [str(i) for i in range(1,len(available_list)+1)]
 
 while current_choice != "0":
-    if current_choice in "123456":
+    if current_choice in valid_choice:
         print("Adding {}".format(current_choice))
-        if current_choice == "1":
-            Computer_list.append("computer")
-        elif current_choice == "2":
-            Computer_list.append("monitor")
-        elif current_choice == "3":
-            Computer_list.append("Keyboard")
-        elif current_choice == "4":
-            Computer_list.append("mouse")
-        elif current_choice == "5":
-            Computer_list.append("mouse mat")
-        elif current_choice == "6":
-            Computer_list.append("hdmi Cable")    
+        index = int(current_choice)-1
+        Computer_list.append(available_list[index])
     else:
         print("Please add options fromthe list below:")
-        print("1: Computer")
-        print("2: Monitor")
-        print("3: Keyboard")
-        print("4: mouse")
-        print("5: mouser mat")
-        print("6: hdmi Cable")
-        print("0: to finish")
+        for index,item in enumerate(available_list):
+            print("{0}:{1}".format(index+1,item))
 
     current_choice = input()
 
