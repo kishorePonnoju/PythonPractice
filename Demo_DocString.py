@@ -1,6 +1,6 @@
 """ Moduel demo code for Documenation in python."""
 
-def mutiply(firstarg,secondarg):
+def mutiply(firstarg:float,secondarg:float) -> int:
     """
     Get two interger and Peform Multiplication
     :param firstarg:  This is frist Argument.
