@@ -9,4 +9,15 @@ def mutiply(firstarg,secondarg):
     """
     return int(firstarg*secondarg)
 
+print("*"*80)
+print(mutiply.__doc__)
+print("*"*80)
+
+print()
+print()
+
+help(mutiply)
+
+
+print()
 print(mutiply(6,7))
