@@ -82,14 +82,186 @@
 # value = "".join(char if char not in separators else " " for char in number ).split()
 # print([int(val) for val in value])
 
-number = input("Please enter a series of numbers,using any separators your like: ")
-separators =""
+# number = input("Please enter a series of numbers,using any separators your like: ")
+# separators =""
 
-for char in number:
-    if not char.isnumeric():
-        separators +=char
-print(separators)
+# for char in number:
+#     if not char.isnumeric():
+#         separators +=char
+# print(separators)
 
-value = "".join(char if char not in separators else " " for char in number ).split()
-print(value)
-print([int(val) for val in value])
+# value = "".join(char if char not in separators else " " for char in number ).split()
+# print(value)
+# print([int(val) for val in value])
+
+# panagram = """The qucik brown fox jumps over teh lazy dog"""
+
+# words=panagram.spilt()
+# print(words)
+
+
+# Tuple
+
+# t ="a","b","c"
+# print(t)
+# print()
+# print(t)
+
+# name = "Tim"
+# age =10
+# print(name,age,"python",20)
+# print((name,age,"python",12))
+
+# welcome = "Welcom to my Nightmae","Alice copper ",1975
+# bad ="Company","Bad company ",1975
+# budgie = "Night flight","Budgie",1976
+# imelda = "More Mayhem", "Emilda May",2011
+# Metallica = "Ride the lighting","Metallica",1985
+
+# print(Metallica)
+# print(Metallica[0])
+# print(Metallica[1])
+# print(Metallica[2])
+
+
+# # Below line will throw an error
+# # Metallica[0] ="Master of pupets"
+# Metallica2 = list(Metallica)
+# print(Metallica2)
+# Metallica2[0] ="Master of pupets"
+# print(Metallica2)
+
+# so the final conclusion is that, tuple data can't be modified once it is defined.
+
+
+# a = b = c = d = e = f = 42
+
+# print(c)
+# print()
+# x,y,z = 1,2,4
+# print (x,y,z)
+# print("Unpacking the tuple")
+# data= (1, 2, 76) # data represents a tuple
+# x, y, z = data
+# print(x)
+# print(y)
+# print(z)
+# print("unpacking the list")
+# data_list =[12,13,14]
+# data_list.append(15)
+# p,q,z= data_list
+# print(p)
+# print(q)
+# print(z)
+
+# enumerate exmple using tuple
+# for index, character in enumerate("abcdefghijklmnopqrtsuvwxyz"):
+#     print(index ,character,end=" ")
+
+##################
+# Nested tuple
+
+# album = (
+#          ("Welcom to my Nightmae","Alice copper ",1975),
+#          ("Company","Bad company ",1975),
+#          ("Night flight","Budgie",1976),
+#          ("More Mayhem", "Emilda May",2011),
+#          ("Ride the lighting","Metallica",1985)
+#          )
+# print(len(album))
+
+# for album_inside in album:
+#     for item in album_inside:
+#         print(item,end="|")
+#     print()
+
+# for name,artist,year in album:
+#     print(f"name ={name}  \t artist ={artist} \t year={year}")
+
+# albums = [
+#     ("Welcome to my Nightmare", "Alice Cooper", 1975,
+#      [
+#          (1, "Welcome to my Nightmare"),
+#          (2, "Devil's Food"),
+#          (3, "The Black Widow"),
+#          (4, "Some Folks"),
+#          (5, "Only Women Bleed"),
+#      ]
+#      ),
+#     ("Bad Company", "Bad Company", 1974,
+#      [
+#          (1, "Can't Get Enough"),
+#          (2, "Rock Steady"),
+#          (3, "Ready for Love"),
+#          (4, "Don't Let Me Down"),
+#          (5, "Bad Company"),
+#          (6, "The Way I Choose"),
+#          (7, "Movin' On"),
+#          (8, "Seagull"),
+#      ]
+#      ),
+#     ("Nightflight", "Budgie", 1981,
+#      [
+#          (1, "I Turned to Stone"),
+#          (2, "Keeping a Rendezvous"),
+#          (3, "Reaper of the Glory"),
+#          (4, "She Used Me Up"),
+#      ]
+#      ),
+#     ("More Mayhem", "Imelda May", 2011,
+#      [
+#          (1, "Pulling the Rug"),
+#          (2, "Psycho"),
+#          (3, "Mayhem"),
+#          (4, "Kentish Town Waltz"),
+#      ]
+#      ),
+# ]
+
+# for name, artist, year, songs in albums:
+#     print("Album: {}, Artist: {}, Year: {}, Songs: {}"
+#           .format(name, artist, year, songs))
+
+# print()
+
+# album = albums[2]
+# print(album)
+
+# songs = album[3]
+# print(songs)
+
+# song = songs[1]
+# print(song)
+# print(song[1])
+
+
+# Function demo
+
+# def noreturnfunction():
+#     print("THis is not return any argument")
+
+# def mutiply(a,b):
+#     return a*b
+
+# print(mutiply(4,5))
+# noreturnfunction()
+
+def banner_text(text):
+    screen_width = 80
+    if len(text) > (screen_width-4):
+        print("EEK!")
+        print("The text is too long to fit in the specified width")
+
+    if text == "*":
+        print("*" * screen_width)
+    else:
+        centred_text = text.center(screen_width-4)
+        output_String = "**{0}**".format(centred_text)
+        print(output_String)
+
+banner_text("*")
+banner_text("This is code sinnpet implemented By")
+banner_text("Kishore Ponnoju")
+banner_text("On 13-07-2024")
+banner_text("To Explain the Banner")
+banner_text("*")
