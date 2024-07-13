@@ -247,8 +247,8 @@
 # noreturnfunction()
 
 # Handling invalid Arugment
-def banner_text(text):
-    screen_width = 80
+# Function annotations with default values
+def Banner_text(text: str = " ",screen_width: int = 80) -> None:
     if len(text) > (screen_width-4):
         raise ValueError(f"String {0} is larger then Specified width {1}".
                          format(text,screen_width))
@@ -256,17 +256,15 @@ def banner_text(text):
         print("*" * screen_width)
     else:
         centred_text = text.center(screen_width-4)
-        output_string = f"**{0}**".format(centred_text)
+        output_string = "**{0}**".format(centred_text)
         print(output_string)
 
-banner_text("*")
-banner_text("This is code sinnpet implemented By")
-banner_text("Kishore Ponnoju")
-banner_text("On 13-07-2024")
-banner_text("To Explain the Banner")
-banner_text("k"*100)
-banner_text("*")
-
+Banner_text("*")
+Banner_text("This is code sinnpet implemented By",)
+Banner_text("Kishore Ponnoju")
+Banner_text("On 13-07-2024")
+Banner_text("To Explain the Banner")
+Banner_text("*")
 
 
 
