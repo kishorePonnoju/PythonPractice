@@ -248,23 +248,50 @@
 
 # Handling invalid Arugment
 # Function annotations with default values
-def Banner_text(text: str = " ",screen_width: int = 80) -> None:
-    if len(text) > (screen_width-4):
-        raise ValueError(f"String {0} is larger then Specified width {1}".
-                         format(text,screen_width))
-    if text == "*":
-        print("*" * screen_width)
-    else:
-        centred_text = text.center(screen_width-4)
-        output_string = "**{0}**".format(centred_text)
-        print(output_string)
+# def Banner_text(text: str = " ",screen_width: int = 80) -> None:
+#     if len(text) > (screen_width-4):
+#         raise ValueError(f"String {0} is larger then Specified width {1}".
+#                          format(text,screen_width))
+#     if text == "*":
+#         print("*" * screen_width)
+#     else:
+#         centred_text = text.center(screen_width-4)
+#         output_string = "**{0}**".format(centred_text)
+#         print(output_string)
 
-Banner_text("*")
-Banner_text("This is code sinnpet implemented By",)
-Banner_text("Kishore Ponnoju")
-Banner_text("On 13-07-2024")
-Banner_text("To Explain the Banner")
-Banner_text("*")
+# Banner_text("*")
+# Banner_text("This is code sinnpet implemented By",)
+# Banner_text("Kishore Ponnoju")
+# Banner_text("On 13-07-2024")
+# Banner_text("To Explain the Banner")
+# Banner_text("*")
+
+# RED = '\u001b[31m'
+# print(RED,"This line will be in RED ")
 
 
+#dict method
+d = {
+    0: "zero",
+    1: "one",
+    2: "two",
+    3: "three",
+    4: "four",
+    5: "five",
+    6: "six",
+    7: "seven",
+    8: "eight",
+    9: "nine",
+}
+
+pantry_items = ['chicken', 'spam', 'egg', 'bread', 'lemon']
+
+new_dict = dict.fromkeys(pantry_items)
+print(new_dict)
+print()
+keys = d.keys()
+print(keys)
+
+for item in d.keys():
+    print(item)
 
