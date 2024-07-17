@@ -1,10 +1,9 @@
 import os
 
-command = 'ping -n 1 google.com'
+host = input('Host / IP Address to Ping: ')
 
-result = os.system(command)
+command = (f'ping -n 1 {host}')
 
-if result != 0:
-    print("command is not successful")
-else:
-    print("Command is successful")
+responce = os.popen(command).read()
+
+print(responce)
